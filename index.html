@@ -13,28 +13,40 @@ background:#0f172a;
 color:#cbd5e1;
 }
 
+/* ================= HERO ================= */
 .hero{
 height:340px;
 background:#0b1220;
 position:relative;
-overflow:hidden;
 border-bottom:1px solid #1f2937;
+overflow:hidden;
 }
 
+/* BACKGROUND IMAGE */
 .hero::before{
 content:"";
 position:absolute;
 inset:0;
-background:url("bg.jpg") center/cover no-repeat;
+background-image:url("bg.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+z-index:0;
 }
 
+/* OVERLAY NHẠT */
 .hero::after{
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.55);
+background:linear-gradient(
+  rgba(0,0,0,0.35),
+  rgba(0,0,0,0.70)
+);
+z-index:1;
 }
 
+/* TEXT HERO */
 .overlay{
 position:absolute;
 inset:0;
@@ -44,33 +56,57 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+z-index:2;
 }
 
 .title{
 font-size:46px;
 color:#00ff99;
-font-weight:bold;
 margin:0;
+font-weight:bold;
 }
 
 .subtitle{
 color:#9ca3af;
 margin-top:10px;
+font-size:15px;
 max-width:850px;
+line-height:1.6;
 }
 
-.btn,.btn-blue{
+/* ================= BUTTONS ================= */
+.btn{
 margin-top:12px;
 padding:12px 20px;
+background:#00ff99;
+color:#000;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+cursor:pointer;
+display:inline-block;
+}
+
+.btn-blue{
+margin-top:12px;
+padding:12px 20px;
+background:#3b82f6;
+color:#fff;
+font-weight:bold;
 border-radius:10px;
 text-decoration:none;
 display:inline-block;
-font-weight:bold;
 }
 
-.btn{background:#00ff99;color:#000;}
-.btn-blue{background:#3b82f6;color:#fff;}
+.btn-blue:hover{
+background:#2563eb;
+}
 
+.btn-green:hover{
+background:#00cc77;
+}
+
+/* ================= CONTENT ================= */
 .container{
 max-width:950px;
 margin:auto;
@@ -83,10 +119,14 @@ padding:18px;
 border-radius:12px;
 border:1px solid #1f2937;
 margin-bottom:15px;
+line-height:1.7;
 }
 
-h2{color:#00ff99;}
+h2{
+color:#00ff99;
+}
 
+/* ================= BUY ================= */
 .buy{
 background:#111827;
 border:1px solid #00ff99;
@@ -100,61 +140,154 @@ color:#00ff99;
 font-weight:bold;
 }
 
+.small{
+color:#9ca3af;
+font-size:13px;
+}
+
+.video{
+margin-top:15px;
+border-radius:12px;
+overflow:hidden;
+border:1px solid #1f2937;
+}
+
 footer{
 text-align:center;
 padding:20px;
 color:#6b7280;
+font-size:13px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
 <div class="overlay">
+
 <h1 class="title">MULTIWATCH PRO</h1>
 
 <p class="subtitle">
-Công cụ đọc và phân tích dữ liệu Excel / CSV từ SSI iBoard
+🇻🇳 Công cụ đọc và phân tích dữ liệu từ file Excel / CSV xuất từ SSI iBoard.  
+<br><br>
+🇬🇧 A tool for reading and analyzing Excel / CSV files exported from SSI iBoard.
 </p>
 
-<a class="btn" href="#buy">MUA NGAY</a>
+<a class="btn" href="#buy">MUA NGAY / BUY NOW</a>
 
-<a class="btn-blue"
-href="https://github.com/hieunguyen1976109-bit/multiwatch-pro/releases/latest/download/MULTIWATCH.PRO.V9.51.FINAL.zip">
-DOWNLOAD FULL
+<!-- ================= DOWNLOAD (THÊM MỚI) ================= -->
+<a class="btn-blue" 
+   href="https://github.com/hieunguyen1976109-bit/multiwatch-pro/releases/download/V9.51/MULTIWATCH.PRO.V9.51.FINAL.zip">
+📥 DOWNLOAD FULL VERSION
 </a>
 
-<a class="btn"
-href="https://github.com/hieunguyen1976109-bit/multiwatch-pro/releases/latest/download/MULTIWATCH.PRO.DEMO.zip">
-DEMO
+<a class="btn" 
+   href="https://github.com/hieunguyen1976109-bit/multiwatch-pro/releases/download/V9.51/MULTIWATCH.PRO.DEMO.zip">
+🧪 DOWNLOAD DEMO
 </a>
 
 </div>
 </div>
 
+<!-- CONTENT -->
 <div class="container">
 
 <div class="card">
-<h2>INTRO</h2>
-MULTIWATCH PRO tool
+<h2>📌 GIỚI THIỆU / INTRODUCTION</h2>
+
+🇻🇳 MULTIWATCH PRO giúp bạn đọc, tổng hợp và xử lý dữ liệu tài chính từ file Excel / CSV.  
+<br><br>
+🇬🇧 MULTIWATCH PRO helps you read, summarize and process financial data from Excel / CSV files.
 </div>
 
 <div class="card">
-<h2>FEATURES</h2>
-- Excel / CSV processing
+<h2>⚙ TÍNH NĂNG / FEATURES</h2>
+
+🇻🇳
+- Đọc file Excel / CSV  
+- Xử lý dữ liệu SSI iBoard  
+- Tổng hợp bảng nhanh  
+
+<br><br>
+
+🇬🇧
+- Read Excel / CSV files  
+- Process SSI iBoard data  
+- Fast data summarization
+</div>
+
+<div class="card">
+<h2>⚙ CÁCH HOẠT ĐỘNG / HOW IT WORKS</h2>
+
+🇻🇳 1. Upload file Excel / CSV<br>
+🇻🇳 2. Hệ thống phân tích dữ liệu<br>
+🇻🇳 3. Hiển thị bảng tổng hợp<br><br>
+
+🇬🇧 1. Upload Excel / CSV file<br>
+🇬🇧 2. System analyzes data<br>
+🇬🇧 3. Display summary table
+</div>
+
+<div class="card">
+<h2>📥 HƯỚNG DẪN / GUIDE</h2>
+
+🇻🇳 Tải file hướng dẫn PDF chi tiết đi kèm sản phẩm  
+<br><br>
+🇬🇧 Download detailed PDF user guide included with the product
+
+<br><br>
+
+<a class="btn" href="hdsd.pdf" target="_blank">MỞ HDSD / OPEN GUIDE</a>
+
+<a class="btn" href="hdsd-license.pdf" target="_blank">HDSD LICENSE / ACTIVATION GUIDE</a>
+
+</div>
+
+<div class="card">
+<h2>🎬 DEMO</h2>
+
+🇻🇳 Video minh hoạ cách xử lý dữ liệu  
+<br>
+🇬🇧 Demo video showing data processing
+
+<div class="video">
+<video width="100%" controls>
+<source src="demo.mp4" type="video/mp4">
+</video>
 </div>
 
 </div>
 
+</div>
+
+<!-- BUY -->
 <div class="container" id="buy">
+
 <div class="buy">
-<h2>MUA BẢN QUYỀN</h2>
+
+<h2>💰 MUA BẢN QUYỀN / LICENSE</h2>
+
 <div class="price">299.000vnđ</div>
-</div>
+
+<p>🇻🇳 Thanh toán 1 lần - sử dụng lâu dài (không giới hạn thời gian sử dụng)</p>
+<p>🇬🇧 One-time payment - lifetime access</p>
+
+<p>🏦 VietinBank: Đang cập nhật</p>
+<p>📱 ZALO: 🇻🇳 0983 148 469 / +84 983 148 469</p>
+
+<p><b>Nội dung chuyển khoản:</b> MULTIWATCH PRO</p>
+
+<p class="small">Hỗ trợ trong giờ hành chính / Support during working hours</p>
+
 </div>
 
-<footer>© MULTIWATCH PRO</footer>
+</div>
+
+<footer>
+© MULTIWATCH PRO
+</footer>
 
 </body>
 </html>

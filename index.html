@@ -3,15 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- 🔥 CACHE BUSTER META -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
-<!-- 🔥 FORCE VERSION -->
-<meta name="version" content="v9.51-2026">
-
 <title>MULTIWATCH PRO</title>
 
 <style>
@@ -31,17 +22,19 @@ border-bottom:1px solid #1f2937;
 overflow:hidden;
 }
 
+/* BACKGROUND IMAGE */
 .hero::before{
 content:"";
 position:absolute;
 inset:0;
-background-image:url("bg.jpg?v=2026");
+background-image:url("bg.jpg");
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 z-index:0;
 }
 
+/* OVERLAY NHẠT */
 .hero::after{
 content:"";
 position:absolute;
@@ -53,6 +46,7 @@ background:linear-gradient(
 z-index:1;
 }
 
+/* TEXT HERO */
 .overlay{
 position:absolute;
 inset:0;
@@ -108,6 +102,10 @@ display:inline-block;
 background:#2563eb;
 }
 
+.btn-green:hover{
+background:#00cc77;
+}
+
 /* ================= CONTENT ================= */
 .container{
 max-width:950px;
@@ -161,20 +159,6 @@ color:#6b7280;
 font-size:13px;
 }
 </style>
-
-<!-- 🔥 FORCE RELOAD SCRIPT (CHỐNG CACHE GITHUB PAGES) -->
-<script>
-(function () {
-    const version = "v9.51-2026";
-    const key = "mw_version";
-
-    if (localStorage.getItem(key) !== version) {
-        localStorage.setItem(key, version);
-        window.location.reload(true);
-    }
-})();
-</script>
-
 </head>
 
 <body>
@@ -193,7 +177,7 @@ font-size:13px;
 
 <a class="btn" href="#buy">MUA NGAY / BUY NOW</a>
 
-<!-- DOWNLOAD -->
+<!-- ================= DOWNLOAD (THÊM MỚI) ================= -->
 <a class="btn-blue" 
    href="https://github.com/hieunguyen1976109-bit/multiwatch-pro/releases/download/V9.51/MULTIWATCH.PRO.V9.51.FINAL.zip">
 📥 DOWNLOAD FULL VERSION
@@ -256,6 +240,7 @@ font-size:13px;
 <br><br>
 
 <a class="btn" href="hdsd.pdf" target="_blank">MỞ HDSD / OPEN GUIDE</a>
+
 <a class="btn" href="hdsd-license.pdf" target="_blank">HDSD LICENSE / ACTIVATION GUIDE</a>
 
 </div>
@@ -263,9 +248,13 @@ font-size:13px;
 <div class="card">
 <h2>🎬 DEMO</h2>
 
+🇻🇳 Video minh hoạ cách xử lý dữ liệu  
+<br>
+🇬🇧 Demo video showing data processing
+
 <div class="video">
 <video width="100%" controls>
-<source src="demo.mp4?v=2026" type="video/mp4">
+<source src="demo.mp4" type="video/mp4">
 </video>
 </div>
 
@@ -282,15 +271,15 @@ font-size:13px;
 
 <div class="price">299.000vnđ</div>
 
-<p>🇻🇳 Thanh toán 1 lần - sử dụng lâu dài</p>
+<p>🇻🇳 Thanh toán 1 lần - sử dụng lâu dài (không giới hạn thời gian sử dụng)</p>
 <p>🇬🇧 One-time payment - lifetime access</p>
 
 <p>🏦 VietinBank: Đang cập nhật</p>
-<p>📱 ZALO: 0983 148 469</p>
+<p>📱 ZALO: 🇻🇳 0983 148 469 / +84 983 148 469</p>
 
 <p><b>Nội dung chuyển khoản:</b> MULTIWATCH PRO</p>
 
-<p class="small">Hỗ trợ trong giờ hành chính</p>
+<p class="small">Hỗ trợ trong giờ hành chính / Support during working hours</p>
 
 </div>
 

@@ -95,7 +95,7 @@ text-decoration:none;
 display:inline-block;
 }
 
-/* ================= DEMO BUTTON (FORCE OVERRIDE) ================= */
+/* ================= DEMO BUTTON ================= */
 .btn-demo{
 margin-top:12px;
 padding:12px 20px;
@@ -183,15 +183,16 @@ font-size:13px;
 
 <a class="btn" href="#buy">MUA NGAY / BUY NOW</a>
 
-<!-- ================= DOWNLOAD ================= -->
-
+<!-- DOWNLOAD -->
 <a class="btn-blue" 
    href="https://github.com/hieunguyen1976109-bit/multiwatch-pro/releases/latest/download/MULTIWATCH.PRO.V9.51.FINAL.zip">
 📥 DOWNLOAD FULL VERSION
 </a>
 
+<!-- FIX: DEMO DOWNLOAD -->
 <a class="btn-demo" 
-   href="https://github.com/hieunguyen1976109-bit/multiwatch-pro/releases/latest/download/MULTIWATCH.PRO.DEMO.zip">
+   href="https://github.com/hieunguyen1976109-bit/multiwatch-pro/releases/latest/download/MULTIWATCH.PRO.DEMO.zip"
+   download>
 🧪 TRY DEMO (LIMITED VERSION)
 </a>
 
@@ -260,8 +261,10 @@ font-size:13px;
 🇬🇧 Demo video showing data processing
 
 <div class="video">
-<video width="100%" controls>
+<video width="100%" controls preload="metadata" playsinline>
 <source src="demo.mp4" type="video/mp4">
+<source src="demo.webm" type="video/webm">
+Trình duyệt của bạn không hỗ trợ video hoặc file demo.mp4 không tồn tại.
 </video>
 </div>
 
